@@ -1,0 +1,33 @@
+﻿
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="../../ext/include-ext.js"></script>
+    <script type="text/javascript">
+        Ext.onReady(function () {
+
+            var insertButton = Ext.create('Ext.button.Button', {
+                text: "Insert Image",
+                renderTo: 'buttons',
+                handler: function () {
+                    Ext.create('Ext.window.Window', {
+                        title: 'Hello',
+                        height: 200,
+                        width: 400,
+                        maximizable: true,
+                        minimizable: true,
+                        //在需要显示缩放特效时需指定的特性
+                        animateTarget: insertButton.getEl()
+                    }).show();
+                }
+            });
+        });
+    </script>
+    <title></title>
+</head>
+<body>
+    <div id="buttons" style="margin:20px;">
+</body>
+</html>
